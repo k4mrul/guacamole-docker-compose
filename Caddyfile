@@ -1,0 +1,8 @@
+#Example of Caddyfile (put or append to /etc/caddy/Caddyfile)
+
+ssh.sre.ovh {
+    redir / /guacamole/ 308
+    reverse_proxy http://127.0.0.1:8080 {
+        flush_interval -1
+    }
+}
